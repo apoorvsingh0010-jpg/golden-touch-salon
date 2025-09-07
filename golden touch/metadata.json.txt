@@ -1,0 +1,5 @@
+{
+  "name": " Golden Touch Beauty Salon",
+  "description": "A promotional website for Golden Touch Beauty Salon's Karwa Chauth offer.",
+  "requestFramePermissions": []
+}

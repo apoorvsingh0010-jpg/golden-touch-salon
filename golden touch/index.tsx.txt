@@ -1,0 +1,105 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+
+function App() {
+  return (
+    <main className="card">
+      <header className="header">
+        <h1 className="brand-name">Golden Touch</h1>
+        <p className="tagline">Beauty Salon</p>
+      </header>
+
+      <section className="offer-section">
+        <h2 className="offer-title">Special Offer</h2>
+        <p className="offer-price">Only at ₹999</p>
+        <ul className="services-list">
+          <li>
+            Diamond Facial
+            <p className="service-description">Get a radiant glow with our exfoliating diamond facial.</p>
+          </li>
+          <li>
+            Full Hand and Half Legs Wax
+            <p className="service-description">Silky smooth skin on your arms and legs.</p>
+          </li>
+          <li>
+            Diamond Bleach
+            <p className="service-description">Instantly brighten your skin and remove tan with a diamond bleach treatment.</p>
+          </li>
+          <li>
+            Threading (Forehead &amp; Upperlips)
+            <p className="service-description">Clean and precise hair removal for a smooth finish.</p>
+          </li>
+          <li>
+            Haircut
+            <p className="service-description">A stylish haircut to refresh your look.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section className="details-section">
+        <h2 className="section-title">Package Details</h2>
+        <ul className="details-list">
+          <li>Get a complete beauty package.</li>
+          <li>Offer valid for a limited time only.</li>
+          <li>Prior appointment is recommended.</li>
+          <li>All services performed by trained professionals.</li>
+        </ul>
+      </section>
+
+      <section className="details-section">
+        <h2 className="section-title">Why Choose Us?</h2>
+        <ul className="details-list">
+          <li><strong>Expert Professionals:</strong> Our skilled beauticians provide top-notch service.</li>
+          <li><strong>Premium Products:</strong> We use high-quality products for effective and safe treatments.</li>
+          <li><strong>Hygienic Environment:</strong> Your safety is our priority in our clean and sanitized salon.</li>
+          <li><strong>Customer Satisfaction:</strong> We are dedicated to making you look and feel your best.</li>
+        </ul>
+      </section>
+      
+      <div className="testimonial">
+        <blockquote>
+          "An amazing experience! The staff is so professional and the results were beyond my expectations. Highly recommended!"
+        </blockquote>
+      </div>
+
+      <footer className="footer">
+        <a href="tel:+917318305816" className="book-now-btn">Book Now</a>
+        <div className="contact-info">
+          <div className="contact-item">
+            <span className="icon" role="img" aria-label="Phone">📞</span>
+            <a href="tel:+917318305816" className="phone-number">+91 7318305816</a>
+          </div>
+          <div className="contact-item">
+            <span className="icon" role="img" aria-label="Address">📍</span>
+            <p className="address">
+              naramau, nankari, iit, kanpur arazi no. 20
+            </p>
+          </div>
+        </div>
+        <div className="social-links">
+          <a href="https://www.facebook.com/share/1JVZ5rp3d9/" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/annu.makeup.artist" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919 4.919 1.266.058 1.644.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
+            </svg>
+          </a>
+          <a href="#" className="social-link" aria-label="WhatsApp">
+             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.908 6.161l.216.324-1.256 4.587 4.739-1.241.33.197z"/>
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+const container = document.getElementById('root');
+if (container) {
+    const root = createRoot(container);
+    root.render(<App />);
+}

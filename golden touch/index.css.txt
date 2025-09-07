@@ -1,0 +1,361 @@
+:root {
+  --pink-light: #fff0f5;
+  --pink-dark: #e75480;
+  --gold: #d4af37;
+  --white: #ffffff;
+  --text-dark: #333;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, var(--pink-light), #ffdbe9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: var(--text-dark);
+  font-size: 20px;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px var(--shadow), inset 0 0 0 1px rgba(212, 175, 55, 0.3);
+  padding: 2rem 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  position: relative;
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, var(--pink-light) 0%, rgba(255,240,245,0) 70%);
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 0;
+}
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, var(--pink-light) 0%, rgba(255,240,245,0) 70%);
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.header, .offer-section, .details-section, .footer {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+  animation: fadeInUp 0.5s ease-out 0.3s backwards;
+}
+
+.brand-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--pink-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.offer-section {
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.5s ease-out 0.4s backwards;
+}
+
+.offer-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  padding: 0 2.5rem;
+}
+
+.offer-title::before, .offer-title::after {
+  content: '❦';
+  font-family: 'serif';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.offer-title::before {
+    left: 0;
+}
+
+.offer-title::after {
+    right: 0;
+}
+
+.offer-price {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px var(--shadow);
+  line-height: 1.2;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.services-list li {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.services-list li:hover {
+  transform: translateX(5px);
+  color: var(--pink-dark);
+}
+
+.services-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.services-list li:last-child {
+  margin-bottom: 0;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 0.4rem;
+  padding-right: 1rem;
+  line-height: 1.4;
+}
+
+.details-section {
+  margin: 2.5rem 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  animation: fadeInUp 0.5s ease-out 0.5s backwards;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.details-list {
+  list-style: none;
+  padding-left: 0.5rem;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.details-list li {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.details-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.testimonial {
+  background-color: var(--pink-light);
+  border-left: 4px solid var(--gold);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.5s ease-out 0.5s backwards;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.testimonial blockquote::before {
+    content: '“';
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-right: 0.25rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  animation: fadeInUp 0.5s ease-out 0.6s backwards;
+}
+
+.book-now-btn {
+  background-color: var(--pink-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231, 84, 128, 0.4);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.book-now-btn:hover,
+.book-now-btn:focus {
+  outline: none;
+  background-color: #d1426d;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(231, 84, 128, 0.6);
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.phone-number {
+  color: var(--pink-dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.phone-number:hover {
+  color: #d1426d;
+}
+
+.address {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  opacity: 0.8;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-link {
+  font-size: 1.8rem;
+  color: var(--pink-dark);
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  color: var(--gold);
+}
+
+/* Added styles for consecutive sections and bold text */
+.details-section + .details-section {
+  margin-top: 0;
+  padding-top: 2rem;
+  border-top: none;
+  animation-delay: 0.55s;
+}
+
+.details-list li strong {
+  font-weight: 700;
+}
